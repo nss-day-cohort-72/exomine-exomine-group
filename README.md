@@ -89,10 +89,20 @@ There is more to algorithmic thinking than just comments for a project like this
 
 1. Have we documented how the application UI should be structured?
 2. Is our ERD complete and approved by our instructors?
-3. Do we know which HTML elements we are going to use for each component?
-4. Have we defined the CSS classes for each component?
+3. Do we know which HTML elements we are going to use for each component? <h1> <div><h2></h2></div> <radio> <value> <button> 
+4. Have we defined the CSS classes for each component? 
+
+.header .minerals .facility .governor .cart
+
 5. Do we know which modules need to be created, and have the responsibility documented for each one?
-6. Do we know the order in which the modules should be developed?
+
+scripts/main.js, transientState.js, GovernorList.js, purchase.js, FacilitySelector.js, colony.js, mineral.js
+
+styles/main.css
+api/database.json
+index.html
+
+6. Do we know the order in which the modules should be developed? database.json, main.js, minerals.js, governor.js, facility.js, colony.js, transientState.js, purchase.js, main.css
 
 If anyone on the team is unsure about any of these questions, it leads to uncertainty, loss of productivity, and disagreements. We strongly urge you to solve this problem completely before writing any code. 
 
