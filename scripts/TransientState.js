@@ -1,7 +1,7 @@
 
 const transientState = {
   facilityId: 0,
-  mineralId: 0,
+  mineralId: 0, 
   governorId: 0,
   quantity: 1,
 };
