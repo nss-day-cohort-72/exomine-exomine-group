@@ -1,214 +1,214 @@
 {
-  "governors": [
-    {
-      "id": 1,
-      "name": "Zara Nova",
-      "colonyId": 1,
-      "status": true
-    },
-    {
-      "id": 2,
-      "name": "Orion Pax",
-      "colonyId": 2,
-      "status": false
-    },
-    {
-      "id": 3,
-      "name": "Astra Vega",
-      "colonyId": 3,
-      "status": true
-    },
-    {
-      "id": 4,
-      "name": "Leo Starwind",
-      "colonyId": 4,
-      "status": false
-    },
-    {
-      "id": 5,
-      "name": "Nova Solaris",
-      "colonyId": 5,
-      "status": true
-    }
-  ],
-  "govPurchase": [],
-  "purchases": [
-    {
-      "facilityId": 2,
-      "mineralId": 2,
-      "governorId": 1,
-      "quantity": 1,
-      "id": 1
-    }
-  ],
-  "colonies": [
-    {
-      "id": 1,
-      "name": "Nova Terra"
-    },
-    {
-      "id": 2,
-      "name": "Starlight Haven"
-    },
-    {
-      "id": 3,
-      "name": "Orion's Reach"
-    },
-    {
-      "id": 4,
-      "name": "Lunar Gateway"
-    },
-    {
-      "id": 5,
-      "name": "Celestial Arc"
-    }
-  ],
-  "colonyInventory": [
-    {
-      "colonyId": 1,
-      "mineralId": 1,
-      "quantity": 120
-    },
-    {
-      "colonyId": 1,
-      "mineralId": 2,
-      "quantity": 80
-    },
-    {
-      "colonyId": 2,
-      "mineralId": 3,
-      "quantity": 150
-    },
-    {
-      "colonyId": 2,
-      "mineralId": 4,
-      "quantity": 60
-    },
-    {
-      "colonyId": 3,
-      "mineralId": 5,
-      "quantity": 200
-    },
-    {
-      "colonyId": 4,
-      "mineralId": 1,
-      "quantity": 90
-    },
-    {
-      "colonyId": 4,
-      "mineralId": 3,
-      "quantity": 110
-    },
-    {
-      "colonyId": 5,
-      "mineralId": 2,
-      "quantity": 130
-    },
-    {
-      "colonyId": 5,
-      "mineralId": 5,
-      "quantity": 70
-    }
-  ],
-  "minerals": [
-    {
-      "id": 1,
-      "name": "Stardust Crystal"
-    },
-    {
-      "id": 2,
-      "name": "Lunarite"
-    },
-    {
-      "id": 3,
-      "name": "Nebulium"
-    },
-    {
-      "id": 4,
-      "name": "Voidstone"
-    },
-    {
-      "id": 5,
-      "name": "Astralite"
-    }
-  ],
-  "facilityInventory": [
-    {
-      "facilityId": 1,
-      "mineralId": 1,
-      "quantity": 500
-    },
-    {
-      "facilityId": 1,
-      "mineralId": 3,
-      "quantity": 300
-    },
-    {
-      "facilityId": 2,
-      "mineralId": 2,
-      "quantity": 400
-    },
-    {
-      "facilityId": 2,
-      "mineralId": 4,
-      "quantity": 250
-    },
-    {
-      "facilityId": 3,
-      "mineralId": 5,
-      "quantity": 600
-    },
-    {
-      "facilityId": 3,
-      "mineralId": 1,
-      "quantity": 350
-    },
-    {
-      "facilityId": 4,
-      "mineralId": 2,
-      "quantity": 450
-    },
-    {
-      "facilityId": 4,
-      "mineralId": 3,
-      "quantity": 200
-    },
-    {
-      "facilityId": 5,
-      "mineralId": 4,
-      "quantity": 500
-    },
-    {
-      "facilityId": 5,
-      "mineralId": 5,
-      "quantity": 300
-    }
-  ],
-  "facilities": [
-    {
-      "id": 1,
-      "name": "Solar Reactor",
-      "status": true
-    },
-    {
-      "id": 2,
-      "name": "Quantum Forge",
-      "status": false
-    },
-    {
-      "id": 3,
-      "name": "Astro Lab",
-      "status": true
-    },
-    {
-      "id": 4,
-      "name": "Nebula Observatory",
-      "status": false
-    },
-    {
-      "id": 5,
-      "name": "Cosmic Refinery",
-      "status": true
-    }
-  ]
+"governors": [
+  {
+    "id": 1,
+    "name": "Zara Nova",
+    "colonyId": 1,
+    "status": true
+  },
+  {
+    "id": 2,
+    "name": "Orion Pax",
+    "colonyId": 2,
+    "status": false
+  },
+  {
+    "id": 3,
+    "name": "Astra Vega",
+    "colonyId": 3,
+    "status": true
+  },
+  {
+    "id": 4,
+    "name": "Leo Starwind",
+    "colonyId": 4,
+    "status": false
+  },
+  {
+    "id": 5,
+    "name": "Nova Solaris",
+    "colonyId": 5,
+    "status": true
+  }
+],
+"govPurchase": [],
+"purchases": [
+  {
+    "facilityId": 2,
+    "mineralId": 2,
+    "governorId": 1,
+    "quantity": 1,
+    "id": 1
+  }
+],
+"colonies": [
+  {
+    "id": 1,
+    "name": "Nova Terra"
+  },
+  {
+    "id": 2,
+    "name": "Starlight Haven"
+  },
+  {
+    "id": 3,
+    "name": "Orion's Reach"
+  },
+  {
+    "id": 4,
+    "name": "Lunar Gateway"
+  },
+  {
+    "id": 5,
+    "name": "Celestial Arc"
+  }
+],
+"colonyInventory": [
+  {
+    "colonyId": 1,
+    "mineralId": 1,
+    "quantity": 120
+  },
+  {
+    "colonyId": 1,
+    "mineralId": 2,
+    "quantity": 80
+  },
+  {
+    "colonyId": 2,
+    "mineralId": 3,
+    "quantity": 150
+  },
+  {
+    "colonyId": 2,
+    "mineralId": 4,
+    "quantity": 60
+  },
+  {
+    "colonyId": 3,
+    "mineralId": 5,
+    "quantity": 200
+  },
+  {
+    "colonyId": 4,
+    "mineralId": 1,
+    "quantity": 90
+  },
+  {
+    "colonyId": 4,
+    "mineralId": 3,
+    "quantity": 110
+  },
+  {
+    "colonyId": 5,
+    "mineralId": 2,
+    "quantity": 130
+  },
+  {
+    "colonyId": 5,
+    "mineralId": 5,
+    "quantity": 70
+  }
+],
+"minerals": [
+  {
+    "id": 1,
+    "name": "Stardust Crystal"
+  },
+  {
+    "id": 2,
+    "name": "Lunarite"
+  },
+  {
+    "id": 3,
+    "name": "Nebulium"
+  },
+  {
+    "id": 4,
+    "name": "Voidstone"
+  },
+  {
+    "id": 5,
+    "name": "Astralite"
+  }
+],
+"facilityInventory": [
+  {
+    "facilityId": 1,
+    "mineralId": 1,
+    "quantity": 500
+  },
+  {
+    "facilityId": 1,
+    "mineralId": 3,
+    "quantity": 300
+  },
+  {
+    "facilityId": 2,
+    "mineralId": 2,
+    "quantity": 400
+  },
+  {
+    "facilityId": 2,
+    "mineralId": 4,
+    "quantity": 250
+  },
+  {
+    "facilityId": 3,
+    "mineralId": 5,
+    "quantity": 600
+  },
+  {
+    "facilityId": 3,
+    "mineralId": 1,
+    "quantity": 350
+  },
+  {
+    "facilityId": 4,
+    "mineralId": 2,
+    "quantity": 450
+  },
+  {
+    "facilityId": 4,
+    "mineralId": 3,
+    "quantity": 200
+  },
+  {
+    "facilityId": 5,
+    "mineralId": 4,
+    "quantity": 500
+  },
+  {
+    "facilityId": 5,
+    "mineralId": 5,
+    "quantity": 300
+  }
+],
+"facilities": [
+  {
+    "id": 1,
+    "name": "Solar Reactor",
+    "status": true
+  },
+  {
+    "id": 2,
+    "name": "Quantum Forge",
+    "status": false
+  },
+  {
+    "id": 3,
+    "name": "Astro Lab",
+    "status": true
+  },
+  {
+    "id": 4,
+    "name": "Nebula Observatory",
+    "status": false
+  },
+  {
+    "id": 5,
+    "name": "Cosmic Refinery",
+    "status": true
+  }
+]
 }
