@@ -7,3 +7,6 @@ body {
     color: #fff; /* Sets the default text color to white for better contrast */
   }
   
+  .cartItems {
+    color: #fff;
+  }
