@@ -1,14 +1,14 @@
-import { purchaseMineral } from './TransientState.js';
+import { transientStateCopy, updateInventory } from './TransientState.js';
 
-
-const handleOrderSubmissionClick = (clickEvent) => {
-  if (clickEvent.target.id == "purchaseBtn") {
-    purchaseMineral();
+const handleOrderSubmissionClick = async (clickEvent) => {
+  if (clickEvent.target.id == 'purchaseBtn') {
+    const transientState = transientStateCopy();
+    await updateInventory(transientState.colonyId, transientState.mineralId);
   }
-}
+};
 
 export const purchaseBtn = () => {
-  document.addEventListener("click", handleOrderSubmissionClick)
+  document.addEventListener('click', handleOrderSubmissionClick);
   return `
     <div class =btn-container>
     <h2>Space Cart</h2>
