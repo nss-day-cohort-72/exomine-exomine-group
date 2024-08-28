@@ -41,7 +41,7 @@ const showFacilityInventory = async (changeEvent) => {
 
     const facilitiesHtml = matchedFacility.map((facility) => {
       return `
-                <input type = "radio" name = "minerals" value = "${facility.mineralId}"/> ${facility.quantity} tons of ${facility.mineralName}
+                <input type="radio" name="minerals" value="${facility.mineralId}"/> ${facility.quantity} tons of ${facility.mineralName}
       
               `;
     });
