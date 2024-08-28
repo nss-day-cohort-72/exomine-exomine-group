@@ -1,8 +1,4 @@
-import {
-  setFacilityId,
-  setMineralId,
-  transientStateCopy,
-} from './TransientState.js';
+import { setMineralId, transientStateCopy } from './TransientState.js';
 
 //Callback Function//
 const showFacilityInventory = async (changeEvent) => {
@@ -104,7 +100,6 @@ const handleMineralSelectionChange = (changeEvent) => {
 const handleFacilitySelectionChange = (changeEvent) => {
   if (changeEvent.target.id === 'facility') {
     const facilityId = parseInt(changeEvent.target.value);
-    setFacilityId(facilityId);
   }
 };
 //Call back function for displaying mineral in shopping cart//
@@ -114,7 +109,7 @@ const showMineralInCart = async () => {
   const transientMineralId = copyOfTransientState.mineralId;
 
   // Debug log to check transientMineralId value
-  console.log('transientMineralId:', transientMineralId);
+  // console.log('transientMineralId:', transientMineralId);
 
   if (!transientMineralId || transientMineralId === 0) {
     para.innerHTML = 'No mineral selected';

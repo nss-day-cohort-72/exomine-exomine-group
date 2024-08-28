@@ -1,4 +1,4 @@
-import { setGovernorId } from './TransientState.js';
+import { setColonyId } from './TransientState.js';
 
 export const Governors = async () => {
   // Fetch data from the server
@@ -23,7 +23,8 @@ export const Governors = async () => {
 
   const arrayOfOptions = governors
     .map(
-      (governor) => `<option value="${governor.id}">${governor.name}</option>`
+      (governor) =>
+        `<option data-colonyId = "${governor.colonyId}" value="${governor.id}">${governor.name}</option>`
     )
     .join('');
 
@@ -41,18 +42,14 @@ export const Governors = async () => {
       }
 
       const selectedGovernor = governors.find((gov) => gov.id == governorId);
-      
 
       const selectedColony = colonies.find(
         (col) => col.id == selectedGovernor.colonyId
       );
-      
 
       const colonyInventoryFiltered = colonyInventory.filter(
         (item) => item.colonyId == selectedColony.id
       );
-      
-      
 
       const colonyMinerals = colonyInventoryFiltered.map((item) => {
         const mineral = minerals.find((min) => min.id == item.mineralId);
@@ -81,7 +78,11 @@ export const Governors = async () => {
 
 const handleGovernorSelectionChange = (changeEvent) => {
   if (changeEvent.target.id === 'governor') {
-    const governorId = parseInt(changeEvent.target.value);
-    setGovernorId(governorId);
+    const selectedOption =
+      changeEvent.target.options[changeEvent.target.selectedIndex];
+
+    const colonyId = parseInt(selectedOption.dataset.colonyid);
+
+    setColonyId(colonyId);
   }
 };
