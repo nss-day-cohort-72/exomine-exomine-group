@@ -85,6 +85,7 @@ export const updateInventory = async (colonyId, mineralId) => {
       console.error('Failed to update the inventory item');
     }
   }
+  document.dispatchEvent(new CustomEvent('stateChanged'));
 };
 
 /*
