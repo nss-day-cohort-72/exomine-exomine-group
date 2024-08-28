@@ -34,7 +34,6 @@
   "govPurchase": [],
   "purchases": [
     {
-<<<<<<< HEAD
       "id": "c201",
       "facilityId": 1,
       "mineralId": 1,
@@ -54,13 +53,6 @@
       "mineralId": 3,
       "governorId": 1,
       "quantity": 1
-=======
-      "facilityId": 2,
-      "mineralId": 2,
-      "governorId": 1,
-      "quantity": 1,
-      "id": 1
->>>>>>> 4dc0aa4489594c477fb1cf3f85bec6e50b23a083
     }
   ],
   "colonies": [
