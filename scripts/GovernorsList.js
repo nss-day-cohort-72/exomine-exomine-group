@@ -42,14 +42,14 @@ export const Governors = async () => {
 
       const selectedGovernor = governors.find((gov) => gov.id == governorId);
       const selectedColony = colonies.find(
-        (col) => col.id == selectedGovernor.colonyID
+        (col) => col.id == selectedGovernor.colonyId
       );
 
       const colonyInventoryFiltered = colonyInventory.filter(
-        (item) => item.colonyID == selectedColony.id
+        (item) => item.colonyId == selectedColony.id
       );
       const colonyMinerals = colonyInventoryFiltered.map((item) => {
-        const mineral = minerals.find((min) => min.id == item.mineralID);
+        const mineral = minerals.find((min) => min.id == item.mineralId);
         return {
           name: mineral.name,
           quantity: item.quantity,

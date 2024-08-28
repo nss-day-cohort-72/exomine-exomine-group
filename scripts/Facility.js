@@ -23,19 +23,19 @@ const showFacilityInventory = async (changeEvent) => {
     const minerals = await responseThree.json();
     //Filter facility inventory selected//
     const facilityInventoryFromSelected = facilityInventory.filter(
-      (facility) => facility.facilityID === facilityId
+      (facility) => facility.facilityId === facilityId
     );
     //Grabbing data needed to display using array methods//
     const matchedFacility = facilityInventoryFromSelected.map((facility) => {
       const facilityName = facilities.find(
-        (selectedFacility) => selectedFacility.id === facility.facilityID
+        (selectedFacility) => selectedFacility.id === facility.facilityId
       );
 
       return {
         facilityName: facilityName.name,
         mineralName: findMatchingMineral(facility, minerals).name,
         quantity: facility.quantity,
-        mineralId: facility.mineralID,
+        mineralId: facility.mineralId,
       };
     });
 
@@ -83,7 +83,7 @@ export const Facilities = async () => {
 const findMatchingMineral = (selectedFacility, mineralsArr) => {
   let matchedMineral = null;
   for (const mineral of mineralsArr) {
-    if (selectedFacility.mineralID === mineral.id) {
+    if (selectedFacility.mineralId === mineral.id) {
       matchedMineral = mineral;
     }
   }
