@@ -60,6 +60,10 @@ const showFacilityInventory = async (changeEvent) => {
 
     html += facilitiesHtml.join('');
     random.innerHTML = html;
+
+    random.querySelectorAll('h2, .form-check-label').forEach(el => {
+      el.classList.add('text-light');
+    });
   }
 };
 
