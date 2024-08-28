@@ -1,4 +1,8 @@
-import { setFacilityId, setMineralId } from './TransientState.js';
+import {
+  setFacilityId,
+  setMineralId,
+  transientStateCopy,
+} from './TransientState.js';
 
 //Callback Function//
 const showFacilityInventory = async (changeEvent) => {
@@ -58,6 +62,7 @@ export const Facilities = async () => {
   document.addEventListener('change', showFacilityInventory);
   document.addEventListener('change', handleMineralSelectionChange);
   document.addEventListener('change', handleFacilitySelectionChange);
+  document.addEventListener('change', showMineralInCart);
 
   let html = '<h3>Choose a facility</h3>';
 
@@ -69,7 +74,7 @@ export const Facilities = async () => {
   });
 
   html += arrayOfOptions.join('');
-  html += '</select';
+  html += '</select>';
 
   return html;
 };
@@ -90,7 +95,6 @@ const findMatchingMineral = (selectedFacility, mineralsArr) => {
 const handleMineralSelectionChange = (changeEvent) => {
   if (changeEvent.target.name === 'minerals') {
     const mineralId = parseInt(changeEvent.target.value);
-    console.log(mineralId);
 
     setMineralId(mineralId);
   }
@@ -101,4 +105,32 @@ const handleFacilitySelectionChange = (changeEvent) => {
     const facilityId = parseInt(changeEvent.target.value);
     setFacilityId(facilityId);
   }
+};
+
+const showMineralInCart = async () => {
+  const para = document.querySelector('.cartItems');
+  const copyOfTransientState = transientStateCopy();
+  const transientMineralId = copyOfTransientState.mineralId;
+
+  // Debug log to check transientMineralId value
+  console.log('transientMineralId:', transientMineralId);
+
+  if (!transientMineralId || transientMineralId === 0) {
+    para.innerHTML = 'No mineral selected';
+    return; // Exit early if the mineral ID is not valid
+  }
+
+  const response = await fetch('http://localhost:8088/minerals');
+  const minerals = await response.json();
+
+  const matchedMineral = minerals.find(
+    (mineral) => mineral.id === transientMineralId
+  );
+
+  if (!matchedMineral) {
+    para.innerHTML = 'No matching mineral found';
+    return; // Exit early if no mineral is found
+  }
+
+  para.innerHTML = `1 ton of ${matchedMineral.name}`;
 };
