@@ -100,6 +100,8 @@ export const updateInventory = async (idOne, idTwo, facility) => {
     } else {
       console.error('Failed to update the inventory item');
     }
+    const customEvent = new CustomEvent("stateChanged")
+    document.dispatchEvent(customEvent)
   } else {
     //If item was not found in database then add a new entry//
     //Set conditional based on facility//

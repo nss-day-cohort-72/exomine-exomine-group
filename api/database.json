@@ -121,7 +121,7 @@
     {
       "colonyId": 1,
       "mineralId": 3,
-      "quantity": 3,
+      "quantity": 4,
       "id": 10
     },
     {
@@ -137,26 +137,26 @@
       "id": 12
     },
     {
-      "colonyId": 2,
-      "mineralId": 2,
-      "quantity": 2,
+      "colonyId": 3,
+      "mineralId": 1,
+      "quantity": 6,
       "id": 13
     },
     {
-      "colonyId": 4,
-      "mineralId": 4,
+      "colonyId": 3,
+      "mineralId": 3,
       "quantity": 1,
       "id": 14
     },
     {
-      "colonyId": 1,
-      "mineralId": 0,
+      "colonyId": 3,
+      "mineralId": 2,
       "quantity": 1,
       "id": 15
     },
     {
       "colonyId": 2,
-      "mineralId": 5,
+      "mineralId": 1,
       "quantity": 1,
       "id": 16
     }
@@ -188,13 +188,13 @@
       "id": 1,
       "facilityId": 1,
       "mineralId": 1,
-      "quantity": 495
+      "quantity": 490
     },
     {
       "id": 2,
       "facilityId": 1,
       "mineralId": 3,
-      "quantity": 299
+      "quantity": 298
     },
     {
       "id": 3,
@@ -224,7 +224,7 @@
       "id": 6,
       "facilityId": 4,
       "mineralId": 2,
-      "quantity": 450
+      "quantity": 449
     },
     {
       "id": 7,
