@@ -58,12 +58,13 @@ const showFacilityInventory = async (changeEvent) => {
 export const Facilities = async () => {
   const response = await fetch('http://localhost:8088/facilities');
   const facilities = await response.json();
-
+  //Event listeners//
   document.addEventListener('change', showFacilityInventory);
   document.addEventListener('change', handleMineralSelectionChange);
   document.addEventListener('change', handleFacilitySelectionChange);
   document.addEventListener('change', showMineralInCart);
 
+  //Creating html//
   let html = '<h3>Choose a facility</h3>';
 
   html += '<select id="facility">';
@@ -90,7 +91,7 @@ const findMatchingMineral = (selectedFacility, mineralsArr) => {
   return matchedMineral;
 };
 
-//Callback for selecting facility//
+//Callback for selecting minerals & facility//
 
 const handleMineralSelectionChange = (changeEvent) => {
   if (changeEvent.target.name === 'minerals') {
@@ -106,7 +107,7 @@ const handleFacilitySelectionChange = (changeEvent) => {
     setFacilityId(facilityId);
   }
 };
-
+//Call back function for displaying mineral in shopping cart//
 const showMineralInCart = async () => {
   const para = document.querySelector('.cartItems');
   const copyOfTransientState = transientStateCopy();

@@ -1,5 +1,3 @@
-import { transientStateCopy } from './TransientState.js';
-
 export const purchaseBtn = () => {
   return `
     <div class =btn-container>
