@@ -49,7 +49,7 @@ export const transientStateCopy = () => {
 
 const fetchInventoryItem = async (colonyId, mineralId) => {
   const response = await fetch(
-    `  http://localhost:8088/colonyInventory?colonyId =${colonyId}&mineralId=${mineralId}`
+    `  http://localhost:8088/colonyInventory?colonyId=${colonyId}&mineralId=${mineralId}`
   );
   const inventoryItems = await response.json();
 
@@ -73,7 +73,7 @@ export const updateInventory = async (colonyId, mineralId) => {
       {
         method: 'PUT',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type':'application/json',
         },
         body: JSON.stringify(updatedItem),
       }
