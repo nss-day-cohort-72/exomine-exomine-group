@@ -1,4 +1,8 @@
-import { setMineralId, transientStateCopy } from './TransientState.js';
+import {
+  setMineralId,
+  colonyTransientStateCopy,
+  setFacilityId,
+} from './TransientState.js';
 
 
 const showFacilityInventory = async (changeEvent) => {
@@ -113,14 +117,15 @@ const handleMineralSelectionChange = (changeEvent) => {
 const handleFacilitySelectionChange = (changeEvent) => {
   if (changeEvent.target.id === 'facility') {
     const facilityId = parseInt(changeEvent.target.value);
+    setFacilityId(facilityId);
   }
 };
 
 
 const showMineralInCart = async () => {
   const para = document.querySelector('.cartItems');
-  const copyOfTransientState = transientStateCopy();
-  const transientMineralId = copyOfTransientState.mineralId;
+  const copyOfColonyTransientState = colonyTransientStateCopy();
+  const transientMineralId = copyOfColonyTransientState.mineralId;
 
 
   if (!transientMineralId || transientMineralId === 0) {
