@@ -81,22 +81,22 @@
     {
       "colonyId": 1,
       "mineralId": 1,
-      "quantity": 120
+      "quantity": 148
     },
     {
       "colonyId": 1,
       "mineralId": 2,
-      "quantity": 80
+      "quantity": 83
     },
     {
       "colonyId": 2,
       "mineralId": 3,
-      "quantity": 150
+      "quantity": 153
     },
     {
       "colonyId": 2,
       "mineralId": 4,
-      "quantity": 60
+      "quantity": 63
     },
     {
       "colonyId": 3,
@@ -122,6 +122,24 @@
       "colonyId": 5,
       "mineralId": 5,
       "quantity": 70
+    },
+    {
+      "colonyId": 1,
+      "mineralId": 3,
+      "quantity": 3,
+      "id": 10
+    },
+    {
+      "colonyId": 1,
+      "mineralId": 4,
+      "quantity": 1,
+      "id": 11
+    },
+    {
+      "colonyId": 1,
+      "mineralId": 5,
+      "quantity": 1,
+      "id": 12
     }
   ],
   "minerals": [
@@ -148,54 +166,70 @@
   ],
   "facilityInventory": [
     {
+      "id": 1,
       "facilityId": 1,
       "mineralId": 1,
-      "quantity": 500
+      "quantity": 499
     },
     {
+      "id": 2,
       "facilityId": 1,
       "mineralId": 3,
       "quantity": 300
     },
     {
+      "id": 3,
       "facilityId": 2,
       "mineralId": 2,
-      "quantity": 400
+      "quantity": 399
     },
     {
+      "id": 4,
       "facilityId": 2,
       "mineralId": 4,
       "quantity": 250
     },
     {
+      "id": 5,
       "facilityId": 3,
       "mineralId": 5,
       "quantity": 600
     },
     {
+      "id": 5,
       "facilityId": 3,
       "mineralId": 1,
       "quantity": 350
     },
     {
+      "id": 6,
       "facilityId": 4,
       "mineralId": 2,
       "quantity": 450
     },
     {
+      "id": 7,
       "facilityId": 4,
       "mineralId": 3,
       "quantity": 200
     },
     {
+      "id": 8,
       "facilityId": 5,
       "mineralId": 4,
       "quantity": 500
     },
     {
+      "id": 9,
       "facilityId": 5,
       "mineralId": 5,
       "quantity": 300
+    },
+    {
+      "facilityId": 1,
+      "mineralId": 1,
+      "quantity": 0,
+      "id": 10
     }
   ],
   "facilities": [
