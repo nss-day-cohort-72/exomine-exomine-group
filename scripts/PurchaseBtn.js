@@ -1,9 +1,25 @@
-import { transientStateCopy, updateInventory } from './TransientState.js';
+import {
+  colonyTransientStateCopy,
+  facilityTransientCopy,
+  updateInventory,
+} from './TransientState.js';
 
 const handleOrderSubmissionClick = async (clickEvent) => {
   if (clickEvent.target.id == 'purchaseBtn') {
-    const transientState = transientStateCopy();
-    await updateInventory(transientState.colonyId, transientState.mineralId);
+    const colonyTransientState = colonyTransientStateCopy();
+    const facilityTransientState = facilityTransientCopy();
+    //Call update inventory for colony inventory
+    await updateInventory(
+      colonyTransientState.colonyId,
+      colonyTransientState.mineralId,
+      'colonyInventory'
+    );
+    //Call update inventory for facility inventory//
+    await updateInventory(
+      facilityTransientState.facilityId,
+      facilityTransientState.mineralId,
+      'facilityInventory'
+    );
   }
 };
 
