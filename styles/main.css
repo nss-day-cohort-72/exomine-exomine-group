@@ -1,0 +1,9 @@
+body {
+    background-image: url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtMjE4LW15bnQtMDYuanBn.jpg'); /* Replace with your image URL */
+    background-size: cover; /* Ensures the background covers the whole page */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the background fixed when scrolling */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    color: #fff; /* Sets the default text color to white for better contrast */
+  }
+  
