@@ -32,7 +32,29 @@
     }
   ],
   "govPurchase": [],
-  "purchases": [],
+  "purchases": [
+    {
+      "id": "c201",
+      "facilityId": 1,
+      "mineralId": 1,
+      "governorId": 1,
+      "quantity": 1
+    },
+    {
+      "id": "4f46",
+      "facilityId": 2,
+      "mineralId": 4,
+      "governorId": 1,
+      "quantity": 1
+    },
+    {
+      "id": "9c95",
+      "facilityId": 1,
+      "mineralId": 3,
+      "governorId": 1,
+      "quantity": 1
+    }
+  ],
   "colonies": [
     {
       "id": 1,
