@@ -74,7 +74,7 @@ export const Facilities = async () => {
   });
 
   html += arrayOfOptions.join('');
-  html += '</select';
+  html += '</select>';
 
   return html;
 };
@@ -112,11 +112,25 @@ const showMineralInCart = async () => {
   const copyOfTransientState = transientStateCopy();
   const transientMineralId = copyOfTransientState.mineralId;
 
-  const response = await fetch(' http://localhost:8088/minerals');
+  // Debug log to check transientMineralId value
+  console.log('transientMineralId:', transientMineralId);
+
+  if (!transientMineralId || transientMineralId === 0) {
+    para.innerHTML = 'No mineral selected';
+    return; // Exit early if the mineral ID is not valid
+  }
+
+  const response = await fetch('http://localhost:8088/minerals');
   const minerals = await response.json();
+
   const matchedMineral = minerals.find(
     (mineral) => mineral.id === transientMineralId
   );
+
+  if (!matchedMineral) {
+    para.innerHTML = 'No matching mineral found';
+    return; // Exit early if no mineral is found
+  }
 
   para.innerHTML = `1 ton of ${matchedMineral.name}`;
 };

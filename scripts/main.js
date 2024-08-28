@@ -19,4 +19,9 @@ const render = async () => {
   container.innerHTML = composedHTML;
 };
 
+document.addEventListener("stateChanged", event => { // Change event name to match
+  console.log("State of data has changed. Regenerating HTML...");
+  render();
+})
+
 render();
