@@ -3,31 +3,31 @@
     {
       "id": 1,
       "name": "Zara Nova",
-      "colonyID": 1,
+      "colonyId": 1,
       "status": true
     },
     {
       "id": 2,
       "name": "Orion Pax",
-      "colonyID": 2,
+      "colonyId": 2,
       "status": false
     },
     {
       "id": 3,
       "name": "Astra Vega",
-      "colonyID": 3,
+      "colonyId": 3,
       "status": true
     },
     {
       "id": 4,
       "name": "Leo Starwind",
-      "colonyID": 4,
+      "colonyId": 4,
       "status": false
     },
     {
       "id": 5,
       "name": "Nova Solaris",
-      "colonyID": 5,
+      "colonyId": 5,
       "status": true
     }
   ],
@@ -65,48 +65,48 @@
   ],
   "colonyInventory": [
     {
-      "colonyID": 1,
-      "mineralID": 1,
+      "colonyId": 1,
+      "mineralId": 1,
       "quantity": 120
     },
     {
-      "colonyID": 1,
-      "mineralID": 2,
+      "colonyId": 1,
+      "mineralId": 2,
       "quantity": 80
     },
     {
-      "colonyID": 2,
-      "mineralID": 3,
+      "colonyId": 2,
+      "mineralId": 3,
       "quantity": 150
     },
     {
-      "colonyID": 2,
-      "mineralID": 4,
+      "colonyId": 2,
+      "mineralId": 4,
       "quantity": 60
     },
     {
-      "colonyID": 3,
-      "mineralID": 5,
+      "colonyId": 3,
+      "mineralId": 5,
       "quantity": 200
     },
     {
-      "colonyID": 4,
-      "mineralID": 1,
+      "colonyId": 4,
+      "mineralId": 1,
       "quantity": 90
     },
     {
-      "colonyID": 4,
-      "mineralID": 3,
+      "colonyId": 4,
+      "mineralId": 3,
       "quantity": 110
     },
     {
-      "colonyID": 5,
-      "mineralID": 2,
+      "colonyId": 5,
+      "mineralId": 2,
       "quantity": 130
     },
     {
-      "colonyID": 5,
-      "mineralID": 5,
+      "colonyId": 5,
+      "mineralId": 5,
       "quantity": 70
     }
   ],
@@ -134,53 +134,53 @@
   ],
   "facilityInventory": [
     {
-      "facilityID": 1,
-      "mineralID": 1,
+      "facilityId": 1,
+      "mineralId": 1,
       "quantity": 500
     },
     {
-      "facilityID": 1,
-      "mineralID": 3,
+      "facilityId": 1,
+      "mineralId": 3,
       "quantity": 300
     },
     {
-      "facilityID": 2,
-      "mineralID": 2,
+      "facilityId": 2,
+      "mineralId": 2,
       "quantity": 400
     },
     {
-      "facilityID": 2,
-      "mineralID": 4,
+      "facilityId": 2,
+      "mineralId": 4,
       "quantity": 250
     },
     {
-      "facilityID": 3,
-      "mineralID": 5,
+      "facilityId": 3,
+      "mineralId": 5,
       "quantity": 600
     },
     {
-      "facilityID": 3,
-      "mineralID": 1,
+      "facilityId": 3,
+      "mineralId": 1,
       "quantity": 350
     },
     {
-      "facilityID": 4,
-      "mineralID": 2,
+      "facilityId": 4,
+      "mineralId": 2,
       "quantity": 450
     },
     {
-      "facilityID": 4,
-      "mineralID": 3,
+      "facilityId": 4,
+      "mineralId": 3,
       "quantity": 200
     },
     {
-      "facilityID": 5,
-      "mineralID": 4,
+      "facilityId": 5,
+      "mineralId": 4,
       "quantity": 500
     },
     {
-      "facilityID": 5,
-      "mineralID": 5,
+      "facilityId": 5,
+      "mineralId": 5,
       "quantity": 300
     }
   ],
