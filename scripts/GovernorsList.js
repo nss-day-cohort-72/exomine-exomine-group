@@ -15,33 +15,28 @@ export const Governors = async () => {
   const mineralsResponse = await fetch('http://localhost:8088/minerals');
   const minerals = await mineralsResponse.json();
 
+  const activeGovernors = governors.filter(governor => governor.status !== false)
+
   let html = `
   <div class="form-group">
     <label for="governor"><h3 class="text-light">Choose a governor</h3></label>
     <select id="governor" class="form-control">
       <option value="0">Choose a governor</option>`;
-  const governorOptions = governors
-    .map((governor) => {
-      if (governor.status !== false) {
-        return `
-         <option data-colonyid="${governor.colonyId}" value="${governor.id}">
-          ${governor.name}
-        </option>
-      `;
-      } else {
-        return `
-         <option data-colonyid="${governor.colonyId}" value="${governor.id}" disabled>
-          ${governor.name}
-        </option>
-      `;
-      }
-    })
-    .join('');
-  html += governorOptions;
-  html += `
-    </select>
-  </div>
-  `;
+  const governorOptions = activeGovernors
+  .map((governor) => {
+    return `
+      <option data-colonyid="${governor.colonyId}" value="${governor.id}">
+        ${governor.name}
+      </option>
+    `;
+  })
+  .join('');
+
+html += governorOptions;
+html += `
+  </select>
+</div>
+`;
 
   document.addEventListener('change', async (event) => {
     if (event.target.id === 'governor') {
