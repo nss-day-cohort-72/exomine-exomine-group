@@ -31,30 +31,6 @@
       "status": true
     }
   ],
-  "govPurchase": [],
-  "purchases": [
-    {
-      "facilityId": 2,
-      "mineralId": 2,
-      "governorId": 1,
-      "quantity": 1,
-      "id": 1
-    },
-    {
-      "facilityId": 1,
-      "mineralId": 3,
-      "governorId": 1,
-      "quantity": 1,
-      "id": 2
-    },
-    {
-      "facilityId": 3,
-      "mineralId": 5,
-      "governorId": 1,
-      "quantity": 1,
-      "id": 3
-    }
-  ],
   "colonies": [
     {
       "id": 1,
@@ -81,7 +57,7 @@
     {
       "colonyId": 1,
       "mineralId": 1,
-      "quantity": 152
+      "quantity": 158
     },
     {
       "colonyId": 1,
@@ -138,7 +114,7 @@
     {
       "colonyId": 1,
       "mineralId": 5,
-      "quantity": 1,
+      "quantity": 5,
       "id": 12
     },
     {
@@ -154,16 +130,22 @@
       "id": 14
     },
     {
-      "colonyId": 3,
-      "mineralId": 2,
-      "quantity": 1,
-      "id": 15
-    },
-    {
       "colonyId": 2,
       "mineralId": 1,
       "quantity": 1,
       "id": 16
+    },
+    {
+      "colonyId": 5,
+      "mineralId": 1,
+      "quantity": 1,
+      "id": 17
+    },
+    {
+      "colonyId": 3,
+      "mineralId": 4,
+      "quantity": 2,
+      "id": 18
     }
   ],
   "minerals": [
@@ -193,7 +175,7 @@
       "id": 1,
       "facilityId": 1,
       "mineralId": 1,
-      "quantity": 488
+      "quantity": 483
     },
     {
       "id": 2,
@@ -241,13 +223,13 @@
       "id": 8,
       "facilityId": 5,
       "mineralId": 4,
-      "quantity": 500
+      "quantity": 498
     },
     {
       "id": 9,
       "facilityId": 5,
       "mineralId": 5,
-      "quantity": 300
+      "quantity": 0
     }
   ],
   "facilities": [

@@ -7,7 +7,7 @@ const colonyInventoryTransientState = {
 const facilityInventoryTransientState = {
   facilityId: 0,
   mineralId: 0,
-  quantity: 0,
+  quantity: 1,
 };
 
 export const setFacilityId = (chosenOption) => {
@@ -34,24 +34,7 @@ export const colonyTransientStateCopy = () => {
 export const facilityTransientCopy = () => {
   return { ...facilityInventoryTransientState };
 };
-
-// export const purchaseMineral = async () => {
-//   const postOptions = {
-//     method: 'PUT',
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//     body: JSON.stringify(transientState),
-//   };
-
-//   const response = await fetch(
-//     'http://localhost:8088/colonyInventory',
-//     postOptions
-//   );
-
-//   document.dispatchEvent(new CustomEvent('stateChanged'));
-// };
-
+//Function to fetch inventory if it exists in database//
 const fetchInventoryItem = async (idOne, idTwo, facility) => {
   let url = '';
   if (facility === 'colonyInventory') {
@@ -76,7 +59,6 @@ export const updateInventory = async (idOne, idTwo, facility) => {
   const item = await fetchInventoryItem(idOne, idTwo, facility);
   let updatedItem;
   if (item) {
-    //Condition for each facility to set updatedItem//
     if (facility === 'colonyInventory') {
       updatedItem = { ...item, quantity: item.quantity + 1 };
     } else if (facility === 'facilityInventory') {
@@ -94,14 +76,14 @@ export const updateInventory = async (idOne, idTwo, facility) => {
         body: JSON.stringify(updatedItem),
       }
     );
-     //Log success message if successfully updated//
+    //Log success message if successfully updated//
     if (response.ok) {
       console.log('Inventory item updated successfully');
     } else {
       console.error('Failed to update the inventory item');
     }
-    const customEvent = new CustomEvent("stateChanged")
-    document.dispatchEvent(customEvent)
+    const customEvent = new CustomEvent('stateChanged');
+    document.dispatchEvent(customEvent);
   } else {
     //If item was not found in database then add a new entry//
     //Set conditional based on facility//
@@ -114,14 +96,19 @@ export const updateInventory = async (idOne, idTwo, facility) => {
     }
 
     // Send POST request
-    const response = await fetch(`http://localhost:8088/${facility}`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(transientObj),
-    });
+    await sendPostRequest(facility, transientObj);
   }
+};
+
+// Helper function that sends POST requests//
+const sendPostRequest = async (facility, obj) => {
+  const response = await fetch(`http://localhost:8088/${facility}`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(obj),
+  });
 };
 
 /*
