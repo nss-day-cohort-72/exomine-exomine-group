@@ -28,7 +28,7 @@ export const setMineralId = (chosenOption) => {
 };
 
 export const colonyTransientStateCopy = () => {
-  return { ...colonyInventoryTransientState };
+  return {...colonyInventoryTransientState };
 };
 
 export const facilityTransientCopy = () => {
